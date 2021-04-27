@@ -13,37 +13,14 @@
 #ifndef GAME_H
 #define GAME_H
 
-
-#include <string>
-
-#include <SFML/Graphics.hpp>
-
-#include "World.h"
-
-
 class Game
 {
 	public:
 		Game();
-		void run();
-
+		virtual ~Game();
+	
 	private:
-		void processEvents();
-		void update(sf::Time deltaTime);
-		void render();
-		void handlePlayerInput(sf::Keyboard::Key key, bool isPressed);
-
-	private:
-		sf::RenderWindow mWindow;
-		sf::Texture mTexture;
-		sf::Sprite mPlayer;
-		bool mIsMovingUp, mIsMovingDown, mIsMovingLeft, mIsMovingRight;
-		float PlayerSpeed;
-		sf::Time TimePerFrame;
-		World mWorld;
-		sf::Color mColorText;
-		sf::Text mStatisticsText;
-		sf::Font mFontText;
+		/* add your private declarations */
 };
 
 #endif /* GAME_H */ 
